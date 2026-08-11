@@ -82,9 +82,10 @@ html, body, #root{
 
 
 .post p{
-    margin-bottom: 10px;  
-    color: #352b2b;
-    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 12px;  
+    color: #875b5b;
+    font-size: 25px;
 }
 
 .post img{
@@ -94,4 +95,20 @@ html, body, #root{
     border-radius: 8px;
     margin-top: 10px;
     
+}
+
+.delete-btn {
+    width: calc(100% - 24px);
+    margin: 8px 12px 12px;
+    padding: 8px 14px;
+    background-color: #ff4d4f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.delete-btn:active {
+    background-color: #d9363e;
 }

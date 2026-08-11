@@ -1,16 +1,109 @@
-# React + Vite
+# 📸 Post Feed App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple full-stack social media style application where users can create posts with an image and caption, view them in a scrollable feed, and delete posts. Built with a MERN-based stack and image hosting via ImageKit.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Create Post** — Upload an image with a caption
+- **Feed View** — Scrollable, Instagram-style feed showing all posts
+- **Delete Post** — Remove a post directly from the feed
+- **Cloud Image Storage** — Images are uploaded and served via ImageKit
+- **Responsive UI** — Optimized for mobile screens with a clean, card-based design
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Frontend**
+- React
+- React Router DOM
+- Axios
+- CSS (custom, mobile-first)
 
-## Expanding the Oxlint configuration
+**Backend**
+- Node.js
+- Express.js
+- Multer (in-memory file handling)
+- MongoDB with Mongoose
+- ImageKit (image storage & CDN)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 📂 Project Structure
+
+```
+project-root/
+├── backend/
+│   ├── src/
+│   │   ├── app.js
+│   │   ├── db/
+│   │   │   └── db.js
+│   │   ├── models/
+│   │   │   └── post.models.js
+│   │   └── service/
+│   │       └── storage.service.js
+│   ├── index.js
+│   └── .env
+│
+└── frontend/
+    ├── src/
+    │   ├── pages/
+    │   │   ├── CreatePost.jsx
+    │   │   └── Feed.jsx
+    │   ├── App.jsx
+    │   └── index.css
+    └── package.json
+```
+
+## ⚙️ Setup & Installation
+
+### 1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd project-root
+```
+
+### 2. Backend Setup
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file in the backend root:
+```env
+PORT=3000
+MONGODB_URI=your_mongodb_connection_string
+IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
+```
+
+Run the backend:
+```bash
+npm run dev
+```
+
+### 3. Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## 🔌 API Endpoints
+
+| Method | Endpoint          | Description              |
+|--------|-------------------|---------------------------|
+| POST   | `/create-post`     | Create a new post (image + caption) |
+| GET    | `/posts`           | Fetch all posts           |
+| DELETE | `/posts/:id`       | Delete a post by ID       |
+
+## 📱 Screenshots
+
+### Feed Page
+![Feed Page](./screenshots/feed.png)
+
+### Create Post Page
+![Create Post Page](./screenshots/create-post.png)
+
+## 🧑‍💻 Author
+
+Made by **Muhammad Umer**
+
+## 📄 License
+
+This project is open source and available for personal/educational use.
