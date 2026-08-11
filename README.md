@@ -55,7 +55,7 @@ project-root/
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/Muhammad-Umer6/Backend_project>
 cd project-root
 ```
 
@@ -94,16 +94,20 @@ npm run dev
 
 ## 📱 Screenshots
 
-### Feed Page
-![Feed Page](./screenshots/feed.png)
-
 ### Create Post Page
-![Create Post Page](./screenshots/create-post.png)
+![Create Post Page](./ScreenShot/create-post-page.png)
 
-## 🧑‍💻 Author
+### Feed Page
+![Feed Page](./ScreenShot/feed-page.png)
+
+### Feed Page
+![Feed Page](./ScreenShot/feed-page-2.png)
+
+### Database Page
+![Feed Page](./ScreenShot/database.png)
+
+##  Author
 
 Made by **Muhammad Umer**
 
-## 📄 License
 
-This project is open source and available for personal/educational use.
